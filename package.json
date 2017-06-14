@@ -1,0 +1,32 @@
+{
+  "name": "h5-cli",
+  "version": "1.0.0",
+  "description": "H5活动页面个人脚手架",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyun012/h5-cli.git"
+  },
+  "author": "Qzx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuyun012/h5-cli/issues"
+  },
+  "homepage": "https://github.com/liuyun012/h5-cli#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.12",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-smushit": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "postcss-px2rem": "^0.3.0"
+  }
+}
