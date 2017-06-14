@@ -32,7 +32,7 @@ gulp.task('serve', function() {
     });
     //监听 html, Less ,js, 图片编译
     gulp.watch("src/*.html", ['htmlmin']);
-    gulp.watch("src/less/*.less", ['lessTocss']);
+    gulp.watch("src/less/**/*.less", ['lessTocss']);
     gulp.watch("src/js/*.js", ['jsmin']);
     gulp.watch("src/images/*.{jpg,png}", ['imagesmin']);
     //监听任何文件变化，实时刷新页面
@@ -48,8 +48,7 @@ gulp.task('lessTocss', function () {
     return gulp.src('./src/less/*.less')
     .pipe(less())
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./dist/css'));
 });
 
 // html文件压缩，本地开发阶段
@@ -77,7 +76,7 @@ gulp.task('lessTocss-build', function () {
         autoprefixer,
         px2rem({remUnit: 16}),
     ];
-    return gulp.src('./src/less/*.less')
+    return gulp.src('./src/less/**/*.less')
     .pipe(less())
     .pipe(postcss(processors))
     .pipe(gulp.dest('./dist/css'));
