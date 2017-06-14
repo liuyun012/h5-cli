@@ -69,6 +69,12 @@ gulp.task('jsmin', function() {
 // 图片文件压缩，本地开发阶段
 gulp.task('imagesmin', function () {
     return gulp.src('./src/images/*.{jpg,png}')
+        .pipe(gulp.dest('./dist/images'));
+});
+
+// 图片文件压缩，本地开发阶段
+gulp.task('imagesmin-build', function () {
+    return gulp.src('./src/images/*.{jpg,png}')
         .pipe(smushit())
         .pipe(gulp.dest('./dist/images'));
 });
@@ -77,7 +83,7 @@ gulp.task('imagesmin', function () {
 gulp.task('sassTocss-build', function () {
     var processors = [
         autoprefixer,
-        px2rem({remUnit: 16}),
+        px2rem({remUnit: 12}),
     ];
     return gulp.src('./src/sass/**/*.scss')
     .pipe(sass())

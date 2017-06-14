@@ -1,12 +1,3 @@
-@import "./index/common.scss";  // css样式初始化
-
-div{
-    color: red;
-    .asd{
-        // jshfsjd
-        font-size: 34px; // 字体
-        color: #fff;
-        width: 100px;
-        height: 100px;
-    }
-}
+@import "./index/reset.scss";  // css样式重置
+@import "./index/common.scss";  // 通用样式
+@import "./index/home.scss";  // 首屏样式

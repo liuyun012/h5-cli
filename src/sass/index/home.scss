@@ -1,0 +1,58 @@
+body {
+    max-width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 12px;
+    background-color: #fff;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./../images/bg1.jpg");
+    background-size: 100% 100%;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 300vh;
+}
+
+.w100 {
+    width: 100%;
+}
+p{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 100px;
+    border-bottom: 1px solid red;
+}
+
+
+// audio 背景音乐样式
+.bgm-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-image: url("./../images/audio.png");
+    z-index: 1;
+    -webkit-animation: myrotate 4s linear 0s infinite normal;
+}
+
+.bgm-btn.mut {
+    background-position: 0 -30px;
+    -webkit-animation: none;
+}
+
+/*Safari and Chrome*/
+@-webkit-keyframes myrotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
