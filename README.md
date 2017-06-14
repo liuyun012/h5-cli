@@ -66,7 +66,7 @@ gulp devHash  通过gulp 在原html文件上自动化添加js、css版本号
    第164行，regexp: new RegExp( prefixDelim + pattern, 'g' ),
    更新为: regexp: new RegExp( prefixDelim + pattern + '(\\?v=\\w{10})?', 'g' ),
 ```
-##目录结构
+## 目录结构
 
 ```
 |
